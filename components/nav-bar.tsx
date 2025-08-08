@@ -1,30 +1,18 @@
+import { menu } from "@/data/menu";
 import Link from "next/link";
 import React from "react";
 
 const NavBar = () => {
   return (
     <nav>
-      <ul className="flex space-x-4">
-        <li>
-          <Link href="/" className="text-gray-300 hover:text-white">
-            What&apos;s New
-          </Link>
-        </li>
-        <li>
-          <Link href="/about" className="text-gray-300 hover:text-white">
-            Stories
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact" className="text-gray-300 hover:text-white">
-            Brands
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact" className="text-gray-300 hover:text-white">
-            Insurance
-          </Link>
-        </li>
+      <ul className="flex space-x-10">
+        {menu.map(item => (
+          <li key={item.name}>
+            <Link href={item.path} className="text-gray-50">
+              {item.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "./container";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
         width={800}
         height={600}
         priority
-        className="object-cover w-full lg:w-2/3 h-full absolute inset-0 z-0 right-0 ml-auto rounded-l-2xl"
+        className="object-cover w-full lg:w-2/3 h-full absolute inset-0 z-0 right-0 ml-auto rounded-l-3xl top-1"
       />
 
       {/* Overlay */}
@@ -24,12 +25,17 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
               Ovalen will make <br /> your life easier
             </h1>
+          </div>
+          <div className="px-8 lg:w-1/4">
             <p className="text-gray-600 text-lg mb-6">
               Explore our best products to find what you want, there you will definitely find it.
             </p>
-            <button className="bg-black text-white px-6 py-3 rounded-full font-medium">
+            <Button className="btn-theme">
               Explore Product
-            </button>
+            </Button>
+            {/* <button className="bg-black text-white px-6 py-3 rounded-full font-medium">
+              Explore Product
+            </button> */}
           </div>
         </Container>
       </div>
